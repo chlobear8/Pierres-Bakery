@@ -13,12 +13,10 @@ namespace Bakery.Tests
         Assert.AreEqual(typeof(BakeryItems), newBakeryItems.GetType());
       }
       [TestMethod]
-      public void GetBakeryType_ReturnsBread_Bread()
+      public void BreadConstructor_CreatesInstanceOfBread_Bread()
       {
-        int bread = 1;
-        BakeryItems newItem = new BakeryItems(bread);
-        int result = newItem.Bread;
-        Assert.AreEqual(bread, result);
+        Bread newBread = new Bread();
+        Assert.AreEqual(typeof(Bread), newBread.GetType());
       }
     }
   }
