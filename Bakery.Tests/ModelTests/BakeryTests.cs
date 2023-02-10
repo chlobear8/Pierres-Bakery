@@ -67,7 +67,7 @@ namespace Bakery.Tests
       public void BuyQuantityDiscountPastry_CalculateDiscountedCost_Cost()
       {
         int Quantity = 4;
-        Pasrty q = new Pastry(3, 3, Quantity);
+        Pastry q = new Pastry(3, 3, Quantity);
         Assert.AreEqual(q.DiscountQuantity, Quantity);
       }
     }
