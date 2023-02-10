@@ -21,7 +21,7 @@ namespace Bakery.Tests
       [TestMethod]
       public void PastryConstructor_CreatesInstanceOfPastry_Pastry()
       {
-        Pastry newPastry = new Pastry(2);
+        Pastry newPastry = new Pastry(2, 1);
         Assert.AreEqual(typeof(Pastry), newPastry.GetType());
       }
       [TestMethod]
@@ -35,7 +35,7 @@ namespace Bakery.Tests
       public void PastryCost_CalculateCost_Cost()
       {
         int Cost = 2;
-        Pastry p = new Pastry(Cost);
+        Pastry p = new Pastry(Cost, 1);
         Assert.AreEqual(p.Cost, Cost);
       }
       [TestMethod]
@@ -48,7 +48,7 @@ namespace Bakery.Tests
       }
       [TestMethod]
       //amount needed before discount
-      public void BuyQuantity_CalculateCost_Cost()
+      public void BuyQuantityPastry_CalculateCost_Cost()
       {
         int Quantity = 1;
         Pastry q = new Pastry(1, Quantity);
