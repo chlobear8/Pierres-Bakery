@@ -38,5 +38,13 @@ namespace Bakery.Tests
         Pastry p = new Pastry(Cost);
         Assert.AreEqual(p.Cost, Cost);
       }
+      [TestMethod]
+      //amount needed before discount
+      public void BuyQuantity_CalculateCost_Cost()
+      {
+        int Quantity = 1;
+        Bread q = new Bread(1, Quantity);
+        Assert.AreEqual(q.BuyQuantity, Quantity)
+      }
     }
   }
