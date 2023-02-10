@@ -9,16 +9,16 @@ namespace Bakery.Tests
     [TestMethod]
       public void BakeryConstructor_CreatesInstanceOfBakery_Bakery()
       {
-        BakeryItems newBakeryItems = new BakeryItems(1);
+        BakeryItems newBakeryItems = new BakeryItems();
         Assert.AreEqual(typeof(BakeryItems), newBakeryItems.GetType());
       }
       [TestMethod]
       public void GetBakeryType_ReturnsBread_Bread()
       {
         int bread = 1;
-        BakeryItems newItem = new BakeryItems(1);
-        string result = newItem;
-        Assert.AreEqual(result, bread);
+        BakeryItems newItem = new BakeryItems(bread);
+        int result = newItem.Bread;
+        Assert.AreEqual(bread, result);
       }
     }
   }
