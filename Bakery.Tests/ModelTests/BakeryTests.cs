@@ -43,7 +43,7 @@ namespace Bakery.Tests
       public void BuyQuantity_CalculateCost_Cost()
       {
         int Quantity = 1;
-        Bread q = new Bread(1, Quantity, 4);
+        Bread q = new Bread(5, Quantity, 4);
         Assert.AreEqual(q.BuyQuantity, Quantity);
       }
       [TestMethod]
@@ -51,7 +51,7 @@ namespace Bakery.Tests
       public void BuyQuantityPastry_CalculateCost_Cost()
       {
         int Quantity = 1;
-        Pastry q = new Pastry(1, Quantity, 3);
+        Pastry q = new Pastry(2, Quantity, 3);
         Assert.AreEqual(q.BuyQuantity, Quantity);
       }
       [TestMethod]
@@ -59,7 +59,7 @@ namespace Bakery.Tests
       public void BuyQuantityDiscount_CalculateDiscountedCost_Cost()
       {
         int Quantity = 3;
-        Bread q = new Bread(3, 3, Quantity);
+        Bread q = new Bread(5, 3, Quantity);
         Assert.AreEqual(q.DiscountQuantity, Quantity);
       }
       [TestMethod]
@@ -82,5 +82,13 @@ namespace Bakery.Tests
         Pastry p = new Pastry(2, 3, 1);
         Assert.AreEqual(p.GetCostForQuantity(4), 6);
       }
+      [TestMethod]
+      public void CreateDiscountedCost_CalculateDiscount_Cost()
+      {
+        Pastry p = new Pastry(2, 4, 1);
+        Assert.AreEqual(p.BuyOneGetOne(4), 6)
+      }
     }
   }
+
+  //Bread b = new Bread(5, 3, 1);
