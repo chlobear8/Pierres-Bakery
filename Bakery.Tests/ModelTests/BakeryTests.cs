@@ -9,7 +9,7 @@ namespace Bakery.Tests
     [TestMethod]
       public void BakeryConstructor_CreatesInstanceOfBakery_Bakery()
       {
-        BakeryItems newBakeryItems = new BakeryItems();
+        BakeryItems newBakeryItems = new BakeryItems(5, 3, 1);
         Assert.AreEqual(typeof(BakeryItems), newBakeryItems.GetType());
       }
       [TestMethod]
@@ -27,16 +27,16 @@ namespace Bakery.Tests
       [TestMethod]
       public void BreadCost_CalculateCost_Cost()
       {
-        int Cost = 5;
-        Bread b = new Bread(Cost, 1, 4);
-        Assert.AreEqual(b.Cost, Cost);
+        int cost = 5;
+        Bread b = new Bread(cost, 1, 4);
+        Assert.AreEqual(b.cost, cost);
       }
       [TestMethod]
       public void PastryCost_CalculateCost_Cost()
       {
-        int Cost = 2;
-        Pastry p = new Pastry(Cost, 1, 3);
-        Assert.AreEqual(p.Cost, Cost);
+        int cost = 2;
+        Pastry p = new Pastry(cost, 1, 3);
+        Assert.AreEqual(p.cost, cost);
       }
       [TestMethod]
       //amount needed before discount
@@ -86,7 +86,7 @@ namespace Bakery.Tests
       public void CreateDiscountedCost_CalculateDiscount_Cost()
       {
         Pastry p = new Pastry(2, 4, 1);
-        Assert.AreEqual(p.BuyOneGetOne(4), 6)
+        Assert.AreEqual(p.BuyOneGetOne(4), 6);
       }
     }
   }
