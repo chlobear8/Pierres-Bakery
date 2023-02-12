@@ -2,7 +2,8 @@ using System;
 using System.Collections.Generic;
 using Bakery.Models;
 
-namespace Bakery
+
+namespace Bakery.Models
 {
   public class Program
   {
@@ -17,7 +18,7 @@ namespace Bakery
           string stringBQuantity = Console.ReadLine();
           int bQuantity = int.Parse(stringBQuantity);
           {
-            Console.WriteLine("Your bread will cost $" + Bakery.Models.BuyOneGetOne(bQuantity));
+            Console.WriteLine("Your bread will cost $" + Bread.BuyOneGetOne(bQuantity));
           }
         }
       }

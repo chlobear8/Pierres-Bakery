@@ -38,7 +38,7 @@ namespace Bakery.Models
       return (int)(CalculatedCost);
     }
 
-    public int BuyOneGetOne(int quantity)
+    public static int BuyOneGetOne(int quantity)
     {
       Bread b = new Bread (5, 2, 1);
       return b.GetCostForQuantity(quantity);

@@ -10,3 +10,6 @@ C:\Users\chloe\Pierres-Bakery\Bakery.Solution\Bakery\obj\Debug\net6.0\Bakery.dll
 C:\Users\chloe\Pierres-Bakery\Bakery.Solution\Bakery\obj\Debug\net6.0\refint\Bakery.dll
 C:\Users\chloe\Pierres-Bakery\Bakery.Solution\Bakery\obj\Debug\net6.0\Bakery.pdb
 C:\Users\chloe\Pierres-Bakery\Bakery.Solution\Bakery\obj\Debug\net6.0\ref\Bakery.dll
+C:\Users\chloe\Pierres-Bakery\Bakery.Solution\Bakery\bin\Debug\net6.0\Bakery.exe
+C:\Users\chloe\Pierres-Bakery\Bakery.Solution\Bakery\bin\Debug\net6.0\Bakery.runtimeconfig.json
+C:\Users\chloe\Pierres-Bakery\Bakery.Solution\Bakery\obj\Debug\net6.0\Bakery.genruntimeconfig.cache
