@@ -14,13 +14,37 @@ namespace Bakery.Models
       string answer = Console.ReadLine();
         if (answer == "B" || answer == "b")
         {
-          Console.WriteLine("How many breads would you like?");
+          Console.WriteLine("How many breads would you like? They are $5 each or 'Buy 2, get 1 Free'");
           string stringBQuantity = Console.ReadLine();
           int bQuantity = int.Parse(stringBQuantity);
           {
             Console.WriteLine("Your bread will cost $" + Bread.BuyOneGetOne(bQuantity));
           }
         }
+          else if (answer == "P" || answer == "p")
+        {
+          Console.WriteLine("How many pastries would you like? They are $2 each or 'Buy 3, get 1 Free'");
+          string stringPQuantity = Console.ReadLine();
+          int pQuantity = int.Parse(stringPQuantity);
+          {
+            Console.WriteLine("Your pastries will cost $" + Pastry.BuyOneGetOne(pQuantity));
+          }
+        }
+        else
+        {
+          Console.WriteLine("Are you finished shopping? ['Y' for yes, 'Enter' for no]");
+          string finished = Console.ReadLine();
+          if (finished == "Y" || finished == "y")
+          {
+            Console.WriteLine("Thanks for shopping with us!");
+          }
+          else
+          {
+            Main();
+          }
+        }
       }
     }
   }
+
+
