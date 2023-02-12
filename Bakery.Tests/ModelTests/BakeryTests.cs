@@ -29,14 +29,14 @@ namespace Bakery.Tests
       {
         int cost = 5;
         Bread b = new Bread(cost, 1, 4);
-        Assert.AreEqual(b.cost, cost);
+        Assert.AreEqual(b.GetCost, cost);
       }
       [TestMethod]
       public void PastryCost_CalculateCost_Cost()
       {
         int cost = 2;
         Pastry p = new Pastry(cost, 1, 3);
-        Assert.AreEqual(p.cost, cost);
+        Assert.AreEqual(p.GetCost, cost);
       }
       [TestMethod]
       //amount needed before discount
@@ -44,7 +44,7 @@ namespace Bakery.Tests
       {
         int Quantity = 1;
         Bread q = new Bread(5, Quantity, 4);
-        Assert.AreEqual(q.BuyQuantity, Quantity);
+        Assert.AreEqual(q.GetBuyQuantity, Quantity);
       }
       [TestMethod]
       //amount needed before discount
@@ -52,7 +52,7 @@ namespace Bakery.Tests
       {
         int Quantity = 1;
         Pastry q = new Pastry(2, Quantity, 3);
-        Assert.AreEqual(q.BuyQuantity, Quantity);
+        Assert.AreEqual(q.GetBuyQuantity, Quantity);
       }
       [TestMethod]
       //amount needed after discount
@@ -60,7 +60,7 @@ namespace Bakery.Tests
       {
         int Quantity = 3;
         Bread q = new Bread(5, 3, Quantity);
-        Assert.AreEqual(q.DiscountQuantity, Quantity);
+        Assert.AreEqual(q.GetDiscountQuantity, Quantity);
       }
       [TestMethod]
       //amount needed after discount
@@ -68,7 +68,7 @@ namespace Bakery.Tests
       {
         int Quantity = 4;
         Pastry q = new Pastry(3, 3, Quantity);
-        Assert.AreEqual(q.DiscountQuantity, Quantity);
+        Assert.AreEqual(q.GetDiscountQuantity, Quantity);
       }
       [TestMethod]
       public void GetCostForQuanity_CalculateCost_Cost()
@@ -85,10 +85,16 @@ namespace Bakery.Tests
       [TestMethod]
       public void CreateDiscountedCost_CalculateDiscount_Cost()
       {
-        Pastry p = new Pastry(2, 4, 1);
-        Assert.AreEqual(p.BuyOneGetOne(4), 6);
+        Pastry p = new Pastry(2, 3, 1);
+        Assert.AreEqual(p.BuyOneGetOne(3), 6);
+      }
+      [TestMethod]
+      public void CreateDiscountedCostBread_CalculateDiscount_Cost()
+      {
+        Bread b = new Bread(5, 2, 1);
+        Assert.AreEqual(b.BuyOneGetOne(2), 10);
       }
     }
   }
 
-  //Bread b = new Bread(5, 3, 1);
+
