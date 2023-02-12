@@ -29,14 +29,14 @@ namespace Bakery.Tests
       {
         int cost = 5;
         Bread b = new Bread(cost, 1, 4);
-        Assert.AreEqual(b.GetCost, cost);
+        Assert.AreEqual(b.GetCost(), cost);
       }
       [TestMethod]
       public void PastryCost_CalculateCost_Cost()
       {
         int cost = 2;
         Pastry p = new Pastry(cost, 1, 3);
-        Assert.AreEqual(p.GetCost, cost);
+        Assert.AreEqual(p.GetCost(), cost);
       }
       [TestMethod]
       //amount needed before discount
@@ -44,7 +44,7 @@ namespace Bakery.Tests
       {
         int Quantity = 1;
         Bread q = new Bread(5, Quantity, 4);
-        Assert.AreEqual(q.GetBuyQuantity, Quantity);
+        Assert.AreEqual(q.GetBuyQuantity(), Quantity);
       }
       [TestMethod]
       //amount needed before discount
@@ -52,7 +52,7 @@ namespace Bakery.Tests
       {
         int Quantity = 1;
         Pastry q = new Pastry(2, Quantity, 3);
-        Assert.AreEqual(q.GetBuyQuantity, Quantity);
+        Assert.AreEqual(q.GetBuyQuantity(), Quantity);
       }
       [TestMethod]
       //amount needed after discount
@@ -60,7 +60,7 @@ namespace Bakery.Tests
       {
         int Quantity = 3;
         Bread q = new Bread(5, 3, Quantity);
-        Assert.AreEqual(q.GetDiscountQuantity, Quantity);
+        Assert.AreEqual(q.GetDiscountQuantity(), Quantity);
       }
       [TestMethod]
       //amount needed after discount
@@ -68,7 +68,7 @@ namespace Bakery.Tests
       {
         int Quantity = 4;
         Pastry q = new Pastry(3, 3, Quantity);
-        Assert.AreEqual(q.GetDiscountQuantity, Quantity);
+        Assert.AreEqual(q.GetDiscountQuantity(), Quantity);
       }
       [TestMethod]
       public void GetCostForQuanity_CalculateCost_Cost()
