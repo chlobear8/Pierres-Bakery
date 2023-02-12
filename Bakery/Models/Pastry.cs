@@ -4,13 +4,13 @@ using Bakery.Models;
 
 namespace Bakery.Models
 {
-  public class BakeryItems
+  public class Pastry
   {
     private int _cost { get; set; }
     private int _buyQuantity { get; set; }
     private int _discountQuantity { get; set; }
 
-    public BakeryItems(int cost, int buyQuantity, int discountQuantity)
+    public Pastry(int cost, int buyQuantity, int discountQuantity)
     {
       _cost = cost;
       _buyQuantity = buyQuantity;
@@ -31,11 +31,16 @@ namespace Bakery.Models
       return _discountQuantity;
     }
 
+    public int GetCostForQuantity(int quantity)
+    {
+      double CalculatedCost = Math.Ceiling(1.0*quantity*_buyQuantity/(_buyQuantity+_discountQuantity))*_cost;
+      return (int)(CalculatedCost);
+    }
+
     public int BuyOneGetOne(int quantity)
     {
-      Bread b = new Bread (5, 3, 1);
-      Pastry p = new Pastry (2, 4, 1);
-      return b.GetCostForQuantity(quantity) + p.GetCostForQuantity(quantity);
+      Pastry p = new Pastry (2, 3, 1);
+      return p.GetCostForQuantity(quantity);
     }
   }
 }
