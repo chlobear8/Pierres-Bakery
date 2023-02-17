@@ -18,7 +18,8 @@ namespace Bakery.Models
           string stringBQuantity = Console.ReadLine();
           int bQuantity = int.Parse(stringBQuantity);
           {
-            Console.WriteLine("Your bread will cost $" + Bread.BuyOneGetOne(bQuantity));
+            Bread b = new Bread (5, 2, 1);
+            Console.WriteLine("Your bread will cost $" + b.GetCostForQuantity(bQuantity));
           }
         }
           else if (answer == "P" || answer == "p")
@@ -27,7 +28,8 @@ namespace Bakery.Models
           string stringPQuantity = Console.ReadLine();
           int pQuantity = int.Parse(stringPQuantity);
           {
-            Console.WriteLine("Your pastries will cost $" + Pastry.BuyOneGetOne(pQuantity));
+            Pastry p = new Pastry (2, 3, 1);
+            Console.WriteLine("Your pastries will cost $" + p.GetCostForQuantity(pQuantity));
           }
         }
         else

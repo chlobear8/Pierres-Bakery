@@ -16,6 +16,7 @@ This project is built to allow users to purchase either bread or pastries from C
 - Clone this repository to your desktop.
 - Build the project using $ dotnet build.
 - Start a development server with $ dotnet run.
+- To test use $ dotnet test within the Bakery.Tests folder.
 
 ## Known bugs
 

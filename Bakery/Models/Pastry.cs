@@ -36,11 +36,5 @@ namespace Bakery.Models
       double CalculatedCost = Math.Ceiling(1.0*quantity*_buyQuantity/(_buyQuantity+_discountQuantity))*_cost;
       return (int)(CalculatedCost);
     }
-
-    public static int BuyOneGetOne(int quantity)
-    {
-      Pastry p = new Pastry (2, 3, 1);
-      return p.GetCostForQuantity(quantity);
-    }
   }
 }

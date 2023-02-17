@@ -99,3 +99,6 @@ C:\Users\chloe\Pierres-Bakery\Bakery.Solution\Bakery.Tests\obj\Debug\net6.0\refi
 C:\Users\chloe\Pierres-Bakery\Bakery.Solution\Bakery.Tests\obj\Debug\net6.0\Bakery.Tests.pdb
 C:\Users\chloe\Pierres-Bakery\Bakery.Solution\Bakery.Tests\obj\Debug\net6.0\Bakery.Tests.genruntimeconfig.cache
 C:\Users\chloe\Pierres-Bakery\Bakery.Solution\Bakery.Tests\obj\Debug\net6.0\ref\Bakery.Tests.dll
+C:\Users\chloe\Pierres-Bakery\Bakery.Solution\Bakery.Tests\bin\Debug\net6.0\Bakery.deps.json
+C:\Users\chloe\Pierres-Bakery\Bakery.Solution\Bakery.Tests\bin\Debug\net6.0\Bakery.runtimeconfig.json
+C:\Users\chloe\Pierres-Bakery\Bakery.Solution\Bakery.Tests\bin\Debug\net6.0\Bakery.exe

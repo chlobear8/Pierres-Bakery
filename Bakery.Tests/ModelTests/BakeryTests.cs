@@ -82,18 +82,6 @@ namespace Bakery.Tests
         Pastry p = new Pastry(2, 3, 1);
         Assert.AreEqual(p.GetCostForQuantity(4), 6);
       }
-      [TestMethod]
-      public void CreateDiscountedCost_CalculateDiscount_Cost()
-      {
-        Pastry p = new Pastry(2, 3, 1);
-        Assert.AreEqual(p.BuyOneGetOne(3), 6);
-      }
-      [TestMethod]
-      public void CreateDiscountedCostBread_CalculateDiscount_Cost()
-      {
-        Bread b = new Bread(5, 2, 1);
-        Assert.AreEqual(b.BuyOneGetOne(2), 10);
-      }
     }
   }
 
